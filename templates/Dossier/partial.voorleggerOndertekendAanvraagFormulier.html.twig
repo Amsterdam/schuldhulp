@@ -63,9 +63,9 @@
                         {{ form_help(form.jssAdviseurEmail) }}
                     {% endif %}
                 </div>
-                {{ form_row(form.schuldenrustLening) }}
+                {{ form_row(form.kindregeling) }}
                 {% if app.user.type == 'admin' %}
-                    {{ form_help(form.schuldenrustLening) }}
+                    {{ form_help(form.kindregeling) }}
                 {% endif %}
                 {{ form_row(form.saneringsKrediet) }}
                 {% if app.user.type == 'admin' %}

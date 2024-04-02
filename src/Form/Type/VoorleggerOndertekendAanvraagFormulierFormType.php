@@ -78,10 +78,10 @@ class VoorleggerOndertekendAanvraagFormulierFormType extends AbstractType
             'label' => 'E-mailadres Jongerenadviseur',
             'help' => 'DB: voorlegger.jss_adviseur_email',
         ]);
-        $builder->add('schuldenrustLening', CheckboxType::class, [
+        $builder->add('kindregeling', CheckboxType::class, [
             'required' => false,
             'label' => 'Kindregeling',
-            'help' => 'DB: voorlegger.schuldenrust_lening',
+            'help' => 'DB: voorlegger.kindregeling',
         ]);
         $builder->add('saneringsKrediet', CheckboxType::class, [
             'required' => false,

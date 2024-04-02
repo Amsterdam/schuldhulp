@@ -1012,7 +1012,7 @@ class Voorlegger
      * @var boolean|null
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $schuldenrustLening;
+    private $kindregeling;
 
     /**
      * @var boolean|null
@@ -2700,17 +2700,17 @@ class Voorlegger
     /**
      * @return bool|null
      */
-    public function getSchuldenrustLening(): ?bool
+    public function getKindregeling(): ?bool
     {
-        return $this->schuldenrustLening;
+        return $this->kindregeling;
     }
 
     /**
-     * @param bool|null $schuldenrustLening
+     * @param bool|null $kindregeling
      */
-    public function setSchuldenrustLening(?bool $schuldenrustLening): void
+    public function setKindregeling(?bool $kindregeling): void
     {
-        $this->schuldenrustLening = $schuldenrustLening;
+        $this->kindregeling = $kindregeling;
     }
 
     /**
