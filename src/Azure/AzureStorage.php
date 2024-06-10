@@ -336,7 +336,7 @@ class AzureStorage implements AzureStorageInterface
         );
 
         if ($response->getStatusCode() >= 400) {
-            throw new \Exception(json_encode(['url' => $tokenUrl, 'response' => $response->getContent(false)]));
+            throw new \Exception(json_encode(['url' => $tokenUrl, 'payload' => $payload, 'config' => $this->config, 'response' => $response->getContent(false)]));
         }
 
         $body = $response->getContent(false);
