@@ -1276,7 +1276,7 @@ class AppDossierController extends AbstractController
      */
     private function checkDocumentAccess(Dossier $dossier, Document $document){
         $dossierDocumenten = $dossier->getDocumenten()->filter(function (DossierDocument $dossierDocument) use ($document) {
-            return $dossierDocument->getDocument() === $document;
+            return $dossierDocument->getDocument()->getId() === $document->getId();
         });
         if ($dossierDocumenten->count() === 0) {
             throw new NotFoundHttpException('Document does not match with dossier');
